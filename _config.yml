@@ -1,11 +1,11 @@
-title: Thang Pham
-description: Software Engineer | Open Source Enthusiast | Tech Minimalist
+title: Pham Quoc Thang
+description: Backend Developer | E-commerce Expert | Magento & Shopify Specialist
 theme: jekyll-theme-minimal
 
 # Custom metadata
-author: Thang Pham
+author: Pham Quoc Thang
 github_username: thangpham0906
-linkedin_username: thangpham0906 # Placeholder, user can update
+linkedin_username: thangpham0906 # Based on the pattern, though not explicitly in PDF
 show_downloads: true
 google_analytics: # UA-XXXXXXXXX-X
 
@@ -13,7 +13,9 @@ google_analytics: # UA-XXXXXXXXX-X
 nav:
   - title: Home
     url: /
+  - title: Experience
+    url: "#experience"
   - title: Projects
-    url: #projects
-  - title: Contact
-    url: #contact
+    url: "#projects"
+  - title: Skills
+    url: "#skills"
