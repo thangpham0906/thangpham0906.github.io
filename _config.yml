@@ -1,0 +1,19 @@
+title: Thang Pham
+description: Software Engineer | Open Source Enthusiast | Tech Minimalist
+theme: jekyll-theme-minimal
+
+# Custom metadata
+author: Thang Pham
+github_username: thangpham0906
+linkedin_username: thangpham0906 # Placeholder, user can update
+show_downloads: true
+google_analytics: # UA-XXXXXXXXX-X
+
+# Navigation
+nav:
+  - title: Home
+    url: /
+  - title: Projects
+    url: #projects
+  - title: Contact
+    url: #contact
