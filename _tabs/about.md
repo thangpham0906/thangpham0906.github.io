@@ -1,20 +1,19 @@
 ---
-layout: default
-title: Home
+# the record of the sidebar navigation tabs
+icon: fas fa-info-circle
+order: 4
 ---
-
-![Hero Image](./assets/images/hero-bg.png)
 
 # Pham Quoc Thang 👋
 **Backend Developer | Middle Level**
 
 With over 4 years of experience, I specialize in building scalable and robust backend systems using modern technologies. My expertise lies in e-commerce platforms like Magento and Shopify, delivering high-impact solutions that align with business goals.
 
-[**📄 Download My Full CV (PDF)**](./assets/PHAM QUOC THANG.pdf)
+[**📄 Download My Full CV (PDF)**](../assets/PHAM%20QUOC%20THANG.pdf)
 
 ---
 
-## 🛠️ Skills & Technologies <a name="skills"></a>
+## 🛠️ Skills & Technologies
 
 | Category | Technologies |
 | :--- | :--- |
@@ -27,7 +26,7 @@ With over 4 years of experience, I specialize in building scalable and robust ba
 
 ---
 
-## 💼 Professional Experience <a name="experience"></a>
+## 💼 Professional Experience
 
 ### **SECOMM SOLUTION CONSULTING CO., LTD**
 *Developer | 02/2023 - Present*
@@ -47,7 +46,7 @@ With over 4 years of experience, I specialize in building scalable and robust ba
 
 ---
 
-## 📂 Key Projects <a name="projects"></a>
+## 📂 Key Projects
 
 ### **LAB (Fintech Platform)**
 - **Role**: Main Developer (Team of 10)
