@@ -6,14 +6,10 @@
       </h3>
       <p class="skill-group-description">{{ group.description }}</p>
 
-      <div class="skill-pills">
+      <div class="skill-chips">
         {% for item in group.skills %}
-          <div class="skill-item">
-            <div class="skill-item-header">
-              <span class="skill-name">{{ item.name }}</span>
-              <span class="skill-level">{{ item.level }}</span>
-            </div>
-            <div class="skill-context">{{ item.context }}</div>
+          <div class="skill-chip" title="{{ item.context }}">
+            <span>{{ item.name }}</span>
           </div>
         {% endfor %}
       </div>

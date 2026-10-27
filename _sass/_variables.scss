@@ -1,10 +1,10 @@
 // Design System Tokens: Pham Quoc Thang Portfolio
-// Minimalist, technical, typography-driven palette
+// Inspired by modern developer platforms: Linear, Stripe, Vercel
 
 :root {
   // Typography Stack
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
   // Spacing Scale
   --space-1: 0.25rem;  // 4px
@@ -20,109 +20,122 @@
   --space-20: 5rem;    // 80px
 
   // Layout Widths
-  --max-width: 1080px;
-  --reading-width: 760px;
-  --header-height: 4rem;
+  --max-width: 1120px;
+  --reading-width: 780px;
+  --header-height: 4.25rem;
 
   // Border Radius
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
   --radius-full: 9999px;
 
   // Transitions
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
 
   // Status Indicators
-  --status-available: #10b981; // Emerald
+  --status-available: #10b981;
   --status-available-bg: rgba(16, 185, 129, 0.12);
 }
 
-// Light Theme
+// Dark Theme (Default)
 :root,
-:root[data-theme="light"] {
-  --bg-primary: #f8fafc;        // Slate 50
-  --bg-surface: #ffffff;        // Pure white
-  --bg-surface-elevated: #ffffff;
-  --bg-subtle: #f1f5f9;         // Slate 100
-  --bg-code: #0f172a;           // Dark code blocks for readability
+:root[data-theme="dark"] {
+  --bg-primary: #0a0d14;         // Deep dark obsidian
+  --bg-surface: #101522;         // Elevated card surface
+  --bg-surface-elevated: #161c2d;
+  --bg-subtle: #171f33;          // Subtle pill / input background
+  --bg-code: #06080e;            // Pure dark code background
   --code-text: #e2e8f0;
 
-  --border-subtle: #e2e8f0;     // Slate 200
-  --border-strong: #cbd5e1;     // Slate 300
-  --border-focus: #0284c7;      // Sky 600
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.15);
+  --border-focus: #38bdf8;
 
-  --text-primary: #0f172a;      // Slate 900
-  --text-secondary: #475569;    // Slate 600
-  --text-muted: #64748b;        // Slate 500
-  --text-inverse: #ffffff;
+  --text-primary: #f8fafc;       // Crisp white
+  --text-secondary: #94a3b8;     // Slate 400
+  --text-muted: #64748b;         // Slate 500
+  --text-inverse: #0a0d14;
 
-  // Restrained Accent: Precision Sky / Slate Cyan
-  --accent: #0284c7;            // Sky 600
-  --accent-hover: #0369a1;      // Sky 700
-  --accent-subtle: #e0f2fe;      // Sky 100
-  --accent-text: #0369a1;
+  // Accent: Electric Sky / Cyan
+  --accent: #38bdf8;             // Sky 400
+  --accent-hover: #7dd3fc;       // Sky 300
+  --accent-subtle: rgba(56, 189, 248, 0.1);
+  --accent-border: rgba(56, 189, 248, 0.25);
+  --accent-text: #38bdf8;
+  --accent-glow: rgba(56, 189, 248, 0.15);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 12px 32px -4px rgba(0, 0, 0, 0.7);
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+  --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.4), 0 8px 30px -4px rgba(56, 189, 248, 0.12);
 }
 
-// Dark Theme (Default preferred for backend engineer persona)
-:root[data-theme="dark"] {
-  --bg-primary: #090d16;        // Deep technical obsidian
-  --bg-surface: #0f1626;        // Slate surface
-  --bg-surface-elevated: #151f33;
-  --bg-subtle: #172136;         // Muted hover background
-  --bg-code: #060911;           // Inset deep code block
+// Light Theme
+:root[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-surface-elevated: #ffffff;
+  --bg-subtle: #f1f5f9;
+  --bg-code: #0f172a;
   --code-text: #e2e8f0;
 
-  --border-subtle: #1e293b;     // Slate 800
-  --border-strong: #334155;     // Slate 700
-  --border-focus: #38bdf8;      // Sky 400
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --border-strong: rgba(0, 0, 0, 0.16);
+  --border-focus: #0284c7;
 
-  --text-primary: #f8fafc;      // Slate 50
-  --text-secondary: #94a3b8;    // Slate 400
-  --text-muted: #64748b;        // Slate 500
-  --text-inverse: #090d16;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-inverse: #ffffff;
 
-  // Restrained Accent: Technical Sky Blue
-  --accent: #38bdf8;            // Sky 400
-  --accent-hover: #7dd3fc;      // Sky 300
-  --accent-subtle: rgba(56, 189, 248, 0.12);
-  --accent-text: #38bdf8;
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --accent-subtle: rgba(2, 132, 199, 0.08);
+  --accent-border: rgba(2, 132, 199, 0.2);
+  --accent-text: #0284c7;
+  --accent-glow: rgba(2, 132, 199, 0.1);
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 24px -3px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 0 0 1px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 0 0 1px rgba(2, 132, 199, 0.3), 0 8px 24px -2px rgba(2, 132, 199, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg-primary: #090d16;
-    --bg-surface: #0f1626;
-    --bg-surface-elevated: #151f33;
-    --bg-subtle: #172136;
-    --bg-code: #060911;
+    --bg-primary: #0a0d14;
+    --bg-surface: #101522;
+    --bg-surface-elevated: #161c2d;
+    --bg-subtle: #171f33;
+    --bg-code: #06080e;
     --code-text: #e2e8f0;
 
-    --border-subtle: #1e293b;
-    --border-strong: #334155;
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-strong: rgba(255, 255, 255, 0.15);
     --border-focus: #38bdf8;
 
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
-    --text-inverse: #090d16;
+    --text-inverse: #0a0d14;
 
     --accent: #38bdf8;
     --accent-hover: #7dd3fc;
-    --accent-subtle: rgba(56, 189, 248, 0.12);
+    --accent-subtle: rgba(56, 189, 248, 0.1);
+    --accent-border: rgba(56, 189, 248, 0.25);
     --accent-text: #38bdf8;
+    --accent-glow: rgba(56, 189, 248, 0.15);
 
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 12px 32px -4px rgba(0, 0, 0, 0.7);
+    --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.06), 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.4), 0 8px 30px -4px rgba(56, 189, 248, 0.12);
   }
 }
