@@ -1,0 +1,8 @@
+- degree: "Bachelor of Information Technology (IT)"
+  institution: "Ton Duc Thang University"
+  location: "Ho Chi Minh City, Vietnam"
+  period: "2015 - 2020"
+  graduation_grade: "Good"
+  highlights:
+    - "Strong foundational grounding in software engineering principles, algorithms, data structures, and database systems."
+    - "Applied software development coursework focusing on enterprise systems, web services, and relational database management."
