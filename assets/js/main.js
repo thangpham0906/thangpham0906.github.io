@@ -118,16 +118,21 @@
     if (window.matchMedia) {
       var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       var handleSystemThemeChange = function (event) {
-        // TODO(human): Implement the system theme change policy.
-        // Decide how the app should respond when the user's OS changes between dark and light modes.
-        // Should it only change if the user has NOT saved an explicit preference in localStorage?
-        // Or should it sync immediately? Write 3-6 lines to check the condition and call setTheme() or update the DOM.
+        var savedTheme = null;
+        try {
+          savedTheme = localStorage.getItem(THEME_KEY);
+        } catch (e) {
+          // Ignore localStorage restriction
+        }
+        // Only adapt to OS theme shift if the user hasn't explicitly set a manual preference
+        if (!savedTheme) {
+          var newTheme = event.matches ? 'dark' : 'light';
+          document.documentElement.setAttribute('data-theme', newTheme);
+        }
       };
 
       if (mediaQuery.addEventListener) {
         mediaQuery.addEventListener('change', handleSystemThemeChange);
-      } else if (mediaQuery.addListener) {
-        mediaQuery.addListener(handleSystemThemeChange);
       }
     }
   });
