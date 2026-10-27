@@ -1,0 +1,88 @@
+- id: sky-premium-international
+  title: "Sky Premium International"
+  subtitle: "Enterprise E-Commerce Backend & Multi-System Synchronization"
+  slug: "sky-premium-international"
+  featured: true
+  category: "E-Commerce"
+  role: "Backend Developer"
+  team_size: "20 members"
+  timeline: "2022 - 2023"
+  stack:
+    - "Magento EE / CE"
+    - "PHP"
+    - "MySQL"
+    - "REST APIs"
+    - "OneSignal"
+    - "CRM Integration"
+    - "PHPUnit"
+  summary: "Engineered scalable backend RESTful APIs for mobile client integration, orchestrated robust CRM data synchronization, and executed a critical enterprise-to-community edition architecture transition."
+  highlights:
+    - "Architected high-throughput RESTful APIs serving mobile application clients."
+    - "Designed bi-directional data synchronization pipeline between Magento backend and enterprise CRM."
+    - "Integrated OneSignal automated push notification service for order milestones and customer alerts."
+    - "Led technical execution of Magento Enterprise Edition (EE) to Community Edition (CE) architectural transition."
+
+- id: seconds-deals
+  title: "Seconds Deals"
+  subtitle: "High-Volume E-Commerce Platform & Custom Logistics Engine"
+  slug: "seconds-deals"
+  featured: true
+  category: "E-Commerce"
+  role: "Backend Developer"
+  team_size: "7 members"
+  timeline: "2023"
+  stack:
+    - "Magento 2"
+    - "PHP"
+    - "MySQL"
+    - "KnockoutJS"
+    - "Carrier APIs"
+    - "Cron / Queue"
+  summary: "Built a customized third-party logistics and dynamic shipping calculation engine alongside an automated asynchronous order state transition system."
+  highlights:
+    - "Developed custom logistics integration module calculating dynamic multi-carrier shipping fees at checkout."
+    - "Implemented automated background pipelines for continuous order state transitions and fulfillment syncing."
+    - "Optimized database queries and checkout workflows to reduce cart abandonment and transaction latency."
+
+- id: lab-fintech
+  title: "LAB Fintech Platform"
+  subtitle: "Enterprise Workflow Automation & Mobile Financial Operations"
+  slug: "lab-fintech"
+  featured: true
+  category: "Fintech & Enterprise"
+  role: "Main Developer"
+  team_size: "10 members"
+  timeline: "2023 - 2024"
+  stack:
+    - "Microsoft Power Apps"
+    - "Power Automate"
+    - "Microsoft Dataverse"
+    - "Power Fx"
+    - "JavaScript"
+    - "Power BI"
+  summary: "Designed and deployed enterprise-grade financial workflows, mobile-first field agent applications, and real-time business intelligence dashboards."
+  highlights:
+    - "Delivered responsive, secure mobile application interface enabling field agents to process financial applications."
+    - "Engineered complex automated approval and verification workflows using Power Automate and Dataverse."
+    - "Integrated live Power BI analytics dashboards for executive tracking of operational metrics and compliance."
+
+- id: secomm-site
+  title: "Secomm Corporate Site"
+  subtitle: "Corporate Digital Experience & Custom CMS Architecture"
+  slug: "secomm-site"
+  featured: false
+  category: "CMS & Web Architecture"
+  role: "Developer"
+  team_size: "7 members"
+  timeline: "2023"
+  stack:
+    - "WordPress"
+    - "PHP"
+    - "HTML5 / SCSS"
+    - "JavaScript"
+    - "REST API"
+  summary: "Engineered customized WordPress plugins and high-performance, responsive presentation components for enterprise digital consulting agency."
+  highlights:
+    - "Developed tailored custom plugins and bespoke theme templates matching rigorous design standards."
+    - "Implemented responsive, accessible UI components with optimized asset delivery and Core Web Vitals compliance."
+    - "Streamlined editorial workflows and content modeling for marketing and technical publishing teams."

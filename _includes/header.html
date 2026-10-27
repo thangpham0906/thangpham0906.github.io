@@ -1,0 +1,47 @@
+<header class="site-header" role="banner">
+  <div class="container header-inner">
+    <a href="{{ '/' | relative_url }}" class="site-brand" aria-label="Pham Quoc Thang Homepage">
+      <span class="brand-terminal-symbol">&gt;_</span>
+      <span>Pham Quoc Thang</span>
+    </a>
+
+    <nav class="site-navigation" aria-label="Main Navigation">
+      <ul class="nav-links">
+        <li class="nav-item">
+          <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active"{% endif %}>Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' or page.url contains '/posts/' %}class="active"{% endif %}>Blog</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/#contact' | relative_url }}">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ '/assets/PHAM QUOC THANG.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">Resume ↗</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      {% include theme-toggle.html %}
+
+      <button type="button" id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-nav-drawer">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Drawer -->
+  <div id="mobile-nav-drawer" class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}class="active"{% endif %}>Projects</a>
+    <a href="{{ '/about/' | relative_url }}" {% if page.url contains '/about/' %}class="active"{% endif %}>About</a>
+    <a href="{{ '/blog/' | relative_url }}" {% if page.url contains '/blog/' or page.url contains '/posts/' %}class="active"{% endif %}>Blog</a>
+    <a href="{{ '/#contact' | relative_url }}">Contact</a>
+    <a href="{{ '/assets/PHAM QUOC THANG.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Download Resume (PDF) ↗</a>
+  </div>
+</header>

@@ -1,0 +1,44 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="container footer-inner">
+    <div class="footer-bio">
+      <div class="site-brand" style="margin-bottom: var(--space-2);">
+        <span class="brand-terminal-symbol">&gt;_</span>
+        <span>Pham Quoc Thang</span>
+      </div>
+      <p>Backend Software Engineer with 4+ years specializing in e-commerce systems, high-throughput APIs, and enterprise workflow automations.</p>
+      <div style="margin-top: var(--space-4);">
+        {% include social-links.html %}
+      </div>
+    </div>
+
+    <div>
+      <h3 class="footer-heading">Navigation</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/projects/' | relative_url }}">Projects &amp; Case Studies</a></li>
+        <li><a href="{{ '/about/' | relative_url }}">About &amp; Engineering Philosophy</a></li>
+        <li><a href="{{ '/blog/' | relative_url }}">Technical Writing</a></li>
+        <li><a href="{{ '/assets/PHAM QUOC THANG.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer">Resume (PDF) ↗</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="footer-heading">Projects</h3>
+      <ul class="footer-links">
+        <li><a href="{{ '/projects/sky-premium-international/' | relative_url }}">Sky Premium International</a></li>
+        <li><a href="{{ '/projects/seconds-deals/' | relative_url }}">Seconds Deals</a></li>
+        <li><a href="{{ '/projects/lab-fintech/' | relative_url }}">LAB Fintech Platform</a></li>
+        <li><a href="{{ '/projects/secomm-site/' | relative_url }}">Secomm Corporate Site</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <div class="footer-copy">
+      &copy; {{ 'now' | date: "%Y" }} Pham Quoc Thang. Built with Jekyll on GitHub Pages.
+    </div>
+    <div class="footer-location">
+      <span class="badge badge-subtle">📍 Ho Chi Minh City, Vietnam</span>
+    </div>
+  </div>
+</footer>

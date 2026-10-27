@@ -1,0 +1,21 @@
+<div class="timeline">
+  {% for exp in site.data.experience %}
+    <div class="timeline-item {% if exp.current %}is-current{% endif %}">
+      <div class="timeline-header">
+        <div>
+          <div class="timeline-role">{{ exp.role }}</div>
+          <div class="timeline-company">{{ exp.company }} &bull; {{ exp.location }}</div>
+        </div>
+        <div class="timeline-period">{{ exp.period }}</div>
+      </div>
+
+      <p class="timeline-summary">{{ exp.summary }}</p>
+
+      <ul class="timeline-achievements">
+        {% for bullet in exp.achievements %}
+          <li>{{ bullet }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>

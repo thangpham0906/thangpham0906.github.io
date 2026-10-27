@@ -1,0 +1,58 @@
+---
+layout: default
+title: "Technical Blog"
+subtitle: "Notes on backend architecture, e-commerce engineering, and system design"
+permalink: /blog/
+meta_description: "Technical blog by Pham Quoc Thang covering backend development, Magento, APIs, and software engineering practices."
+---
+
+<div class="reading-container" style="padding-top: var(--space-8); padding-bottom: var(--space-16);">
+  <header style="margin-bottom: var(--space-10); border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-6);">
+    <div class="section-eyebrow" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-2); font-weight: 600;">Engineering Notes</div>
+    <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--space-2);">Technical Writing</h1>
+    <p style="font-size: 1.125rem; color: var(--text-secondary);">
+      Articles, architecture reviews, and engineering notes on building robust backend systems.
+    </p>
+  </header>
+
+  <div class="blog-list">
+    {% for post in site.posts %}
+      <article class="blog-item">
+        <div class="blog-item-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+          <span>&bull;</span>
+          <span>
+            {% assign words = post.content | number_of_words %}
+            {% if words < 360 %}
+              1 min read
+            {% else %}
+              {{ words | divided_by: 180 }} min read
+            {% endif %}
+          </span>
+          {% if post.categories.size > 0 %}
+            <span>&bull;</span>
+            <span class="badge badge-accent">{{ post.categories | join: ", " }}</span>
+          {% endif %}
+        </div>
+
+        <h2 class="blog-item-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+
+        <p class="blog-item-excerpt">
+          {{ post.excerpt | strip_html | truncatewords: 40 }}
+        </p>
+
+        <div class="blog-item-tags">
+          {% for tag in post.tags %}
+            <span class="badge badge-subtle">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </article>
+    {% else %}
+      <div style="padding: var(--space-8); text-align: center; color: var(--text-muted); background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg);">
+        <p>No articles published yet. Check back soon for technical deep-dives.</p>
+      </div>
+    {% endfor %}
+  </div>
+</div>

@@ -13,9 +13,9 @@ timezone: Asia/Ho_Chi_Minh
 # ↓ --------------------------
 
 title: Pham Quoc Thang
-tagline: Backend Developer | E-commerce Expert | Magento & Shopify Specialist
+tagline: Backend Software Engineer | E-Commerce, APIs & System Integrations
 description: >-
-  Over 4 years of experience as a Middle Backend Developer, specializing in scalable backend systems and e-commerce projects.
+  Backend Software Engineer with over 4 years of experience specializing in scalable backend architectures, high-volume e-commerce platforms, RESTful APIs, and enterprise system integrations.
 
 # Fill in the protocol & hostname for your site.
 url: "https://thangpham0906.github.io"
@@ -25,7 +25,7 @@ github:
 
 social:
   name: Pham Quoc Thang
-  email: thangpham0906@example.com
+  email: thangpham0906@gmail.com
   links:
     - https://github.com/thangpham0906
     - https://linkedin.com/in/thangpham0906
@@ -57,6 +57,9 @@ kramdown:
       start_line: 1
 
 collections:
+  projects:
+    output: true
+    permalink: /projects/:title/
   tabs:
     output: true
     sort_by: order
@@ -74,6 +77,11 @@ defaults:
       path: _drafts
     values:
       comments: false
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
   - scope:
       path: ""
       type: tabs

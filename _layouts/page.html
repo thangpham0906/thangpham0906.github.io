@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="reading-container" style="padding-top: var(--space-8); padding-bottom: var(--space-16);">
+  <header style="margin-bottom: var(--space-8); border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-6);">
+    <h1 style="font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: var(--space-2);">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p style="font-size: 1.125rem; color: var(--text-secondary);">{{ page.subtitle }}</p>
+    {% endif %}
+  </header>
+
+  <div class="page-content" style="font-size: 1.0625rem; line-height: 1.8;">
+    {{ content }}
+  </div>
+</div>

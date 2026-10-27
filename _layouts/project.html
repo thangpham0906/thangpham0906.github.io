@@ -1,0 +1,73 @@
+---
+layout: default
+---
+
+<article class="project-case-study">
+  <div class="reading-container">
+    <!-- Breadcrumbs -->
+    <nav class="breadcrumbs" aria-label="Breadcrumbs">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span>/</span>
+      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <span>/</span>
+      <span aria-current="page">{{ page.title }}</span>
+    </nav>
+
+    <!-- Case Study Header -->
+    <header class="project-hero-header">
+      <div class="project-hero-category">
+        <span class="badge badge-accent">{{ page.category }}</span>
+      </div>
+      <h1 class="project-hero-title">{{ page.title }}</h1>
+      <p class="project-hero-subtitle">{{ page.subtitle }}</p>
+    </header>
+
+    <!-- Project Metadata Card -->
+    <div class="project-meta-box">
+      <div class="meta-col">
+        <span class="meta-label">Role</span>
+        <span class="meta-value">{{ page.role }}</span>
+      </div>
+      <div class="meta-col">
+        <span class="meta-label">Team Size</span>
+        <span class="meta-value">{{ page.team_size }}</span>
+      </div>
+      <div class="meta-col">
+        <span class="meta-label">Timeline</span>
+        <span class="meta-value">{{ page.timeline }}</span>
+      </div>
+      <div class="meta-col">
+        <span class="meta-label">Domain</span>
+        <span class="meta-value">{{ page.category }}</span>
+      </div>
+    </div>
+
+    <!-- Tech Stack Box -->
+    <div class="project-stack-box">
+      <div class="stack-label">Technologies &amp; Architecture</div>
+      <div class="stack-pills">
+        {% for tech in page.stack %}
+          <span class="badge badge-subtle">{{ tech }}</span>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Case Study Core Body -->
+    <div class="project-content">
+      {{ content }}
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="project-navigation" aria-label="Project Navigation">
+      <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+        <span>Back to All Projects</span>
+      </a>
+      <a href="{{ '/assets/PHAM QUOC THANG.pdf' | relative_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+        <span>Download CV (PDF) ↗</span>
+      </a>
+    </nav>
+  </div>
+</article>

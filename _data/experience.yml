@@ -1,0 +1,36 @@
+- company: "SECOMM SOLUTION CONSULTING CO., LTD"
+  role: "Backend Software Engineer"
+  employment_type: "Full-time"
+  location: "Ho Chi Minh City, Vietnam"
+  period: "02/2023 - Present"
+  current: true
+  summary: "Lead technical backend solutioning, architectural upgrades, and enterprise automation for high-stakes e-commerce and digital transformation clients."
+  achievements:
+    - "Architected and delivered backend modules, custom extensions, and integration points across Magento, Laravel, and WordPress platforms."
+    - "Provided technical solution architecture, dependency risk assessment, and precise engineering effort estimations for enterprise client proposals."
+    - "Engineered internal and client-facing business workflow automations utilizing Microsoft Power Platform (Power Apps, Power Automate, Dataverse)."
+    - "Maintained system reliability by troubleshooting complex production defects and resolving critical issues during UAT and QC testing cycles."
+    - "Collaborated with cross-functional teams including project managers, QA engineers, frontend specialists, and client stakeholders."
+
+- company: "WIKI SOLUTION"
+  role: "Software Developer"
+  employment_type: "Full-time"
+  location: "Ho Chi Minh City, Vietnam"
+  period: "01/2022 - 11/2022"
+  current: false
+  summary: "Focused on core e-commerce engineering, Magento platform maintenance, API creation, and multi-version platform migrations."
+  achievements:
+    - "Developed and maintained high-traffic Magento 2 e-commerce platforms with custom checkout and catalogue features."
+    - "Designed and optimized RESTful APIs enabling seamless data exchange with native iOS and Android applications."
+    - "Executed complex Magento platform version upgrades, security patches, and third-party module audit integrations."
+    - "Engaged directly with international and domestic clients to gather technical specifications and provide pragmatic implementation guidance."
+
+education:
+  - degree: "Bachelor of Information Technology (IT)"
+    institution: "Ton Duc Thang University"
+    location: "Ho Chi Minh City, Vietnam"
+    period: "2015 - 2020"
+    graduation_grade: "Good"
+    highlights:
+      - "Strong foundational grounding in software engineering principles, algorithms, data structures, and database systems."
+      - "Applied software development coursework focusing on enterprise systems, web services, and relational database management."

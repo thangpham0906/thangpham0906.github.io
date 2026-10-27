@@ -10,7 +10,7 @@
 
 - type: email
   icon: "fas fa-envelope"
-  url: "mailto:thangpham0906@example.com"
+  url: "mailto:thangpham0906@gmail.com"
   noblank: true
 
 - type: rss

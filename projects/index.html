@@ -1,0 +1,27 @@
+---
+layout: default
+title: "Projects"
+subtitle: "Production Engineering Case Studies & System Architectures"
+permalink: /projects/
+meta_description: "Explore backend engineering case studies by Pham Quoc Thang, covering Magento enterprise e-commerce, custom logistics rating algorithms, and fintech workflow automations."
+---
+
+<div class="container" style="padding-top: var(--space-8); padding-bottom: var(--space-16);">
+  <header style="margin-bottom: var(--space-10); border-bottom: 1px solid var(--border-subtle); padding-bottom: var(--space-8);">
+    <div class="section-eyebrow" style="font-family: var(--font-mono); font-size: 0.8125rem; color: var(--accent); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: var(--space-2); font-weight: 600;">Work &amp; Case Studies</div>
+    <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: var(--space-3);">Engineering Projects</h1>
+    <p style="font-size: 1.125rem; color: var(--text-secondary); max-width: 720px; line-height: 1.7;">
+      In-depth technical write-ups detailing backend architecture, system integrations, dynamic carrier rating algorithms, and enterprise workflow automations across real-world production environments.
+    </p>
+  </header>
+
+  <div class="projects-grid">
+    {% for project in site.data.projects %}
+      {% include project-card.html project=project %}
+    {% endfor %}
+  </div>
+
+  <div style="margin-top: var(--space-12); padding: var(--space-6); background-color: var(--bg-surface); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); font-size: 0.875rem; color: var(--text-muted);">
+    <strong>Note on Confidentiality:</strong> Project summaries and case studies describe high-level architecture, design decisions, and system integrations. In accordance with client NDAs, proprietary source code and sensitive internal configurations are intentionally omitted.
+  </div>
+</div>

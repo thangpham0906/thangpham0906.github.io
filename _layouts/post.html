@@ -1,0 +1,64 @@
+---
+layout: default
+---
+
+<article class="post-article">
+  <div class="reading-container">
+    <nav class="breadcrumbs" aria-label="Breadcrumbs" style="margin-bottom: var(--space-6);">
+      <a href="{{ '/' | relative_url }}">Home</a>
+      <span>/</span>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <span>/</span>
+      <span aria-current="page">{{ page.title }}</span>
+    </nav>
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        <span>&bull;</span>
+        <span>
+          {% assign words = content | number_of_words %}
+          {% if words < 360 %}
+            1 min read
+          {% else %}
+            {{ words | divided_by: 180 }} min read
+          {% endif %}
+        </span>
+        {% if page.categories.size > 0 %}
+          <span>&bull;</span>
+          <span class="badge badge-accent">{{ page.categories | join: ", " }}</span>
+        {% endif %}
+      </div>
+
+      <h1 class="post-title">{{ page.title }}</h1>
+
+      {% if page.tags.size > 0 %}
+        <div class="post-tags">
+          {% for tag in page.tags %}
+            <span class="badge badge-subtle">#{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <!-- Post Author & Nav Footer -->
+    <div style="margin-top: var(--space-12); padding-top: var(--space-6); border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--space-4);">
+      <a href="{{ '/blog/' | relative_url }}" class="btn btn-secondary btn-sm">
+        <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </svg>
+        <span>Back to All Posts</span>
+      </a>
+
+      <div style="font-size: 0.875rem; color: var(--text-muted);">
+        Written by <strong>Pham Quoc Thang</strong>
+      </div>
+    </div>
+  </div>
+</article>

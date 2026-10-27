@@ -1,0 +1,34 @@
+// Syntax Highlighting (Rouge)
+// High-contrast, clean code styling
+
+.highlight {
+  background-color: var(--bg-code);
+  border-radius: var(--radius-md);
+  margin: var(--space-4) 0;
+
+  pre {
+    margin: 0;
+    padding: var(--space-4);
+    background-color: transparent;
+    border: none;
+  }
+
+  // Rouge tokens
+  .c, .c1, .cm, .cs { color: #64748b; font-style: italic; } // Comments
+  .k, .kd, .kn, .kr { color: #f472b6; font-weight: 600; }   // Keywords
+  .kt { color: #38bdf8; }                                   // Type
+  .s, .s1, .s2, .sa, .sb, .sc { color: #a5f3fc; }          // Strings
+  .na, .nc, .nd, .ne, .nf { color: #67e8f9; }              // Function / Class
+  .nn { color: #cbd5e1; }
+  .nv, .vc, .vg, .vi { color: #e2e8f0; }                   // Variables
+  .o, .ow { color: #94a3b8; }                              // Operators
+  .m, .mf, .mh, .mi, .mo { color: #fde047; }               // Numbers
+  .w { color: #94a3b8; }
+}
+
+// Inline code blocks
+p code, li code, td code {
+  color: var(--accent-text);
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-subtle);
+}
