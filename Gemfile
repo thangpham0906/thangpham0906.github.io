@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3"
 gem "jekyll-paginate", "~> 1.1"
 gem "jekyll-archives", "~> 2.2"
-gem "jekyll-theme-chirpy", "~> 7.5"
+gem "webrick", "~> 1.8"
 
 gem "html-proofer", "~> 5.0", group: :test
 

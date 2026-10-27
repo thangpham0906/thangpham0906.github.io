@@ -28,12 +28,6 @@
   color: #041019;
   border-color: var(--accent);
 
-  :root[data-theme="light"] & {
-    background-color: var(--accent);
-    color: #ffffff;
-    border-color: var(--accent);
-  }
-
   &:hover {
     background-color: var(--accent-hover);
     border-color: var(--accent-hover);
@@ -449,8 +443,20 @@
   .icon-sun {
     display: block;
   }
+}
 
-  :root[data-theme="light"] & {
+:root[data-theme="light"] {
+  .site-header {
+    background-color: rgba(248, 250, 252, 0.85);
+  }
+
+  .btn-primary {
+    background-color: var(--accent);
+    color: #ffffff;
+    border-color: var(--accent);
+  }
+
+  .theme-toggle-btn {
     .icon-sun {
       display: none;
     }

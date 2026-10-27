@@ -45,10 +45,6 @@
   border-bottom: 1px solid var(--border-subtle);
   transition: background-color var(--transition-normal), border-color var(--transition-normal);
 
-  :root[data-theme="light"] & {
-    background-color: rgba(248, 250, 252, 0.85);
-  }
-
   .header-inner {
     display: flex;
     align-items: center;
