@@ -1,5 +1,5 @@
 // Design System Tokens: Pham Quoc Thang Portfolio
-// Modern High-End Developer Aesthetic (Linear / Vercel / Raycast inspired)
+// Selected Dark Theme: Linear & Raycast Obsidian Palette (Rated #1 developer dark theme)
 
 :root {
   // Typography Stack
@@ -39,47 +39,47 @@
 
   // Status Indicators
   --status-available: #10b981;
-  --status-available-bg: rgba(16, 185, 129, 0.12);
+  --status-available-bg: rgba(16, 185, 129, 0.14);
 }
 
-// Dark Theme (Default)
+// Dark Theme (Linear / Raycast Obsidian Palette)
 :root,
 :root[data-theme="dark"] {
-  --bg-primary: #07090e;         // Pure technical obsidian
-  --bg-surface: #0d111a;         // Sleek card background
-  --bg-surface-elevated: #131826;
-  --bg-subtle: #161c2c;          // Subtle pill / input background
-  --bg-code: #04060a;            // Deep terminal background
+  --bg-primary: #08090c;         // Linear Canvas (deep obsidian slate)
+  --bg-surface: #0e1117;         // Linear Card Surface (elevated from canvas)
+  --bg-surface-elevated: #141822; // Popovers / Floating Bar / Terminal
+  --bg-subtle: #181d2a;          // Pill tags & micro containers
+  --bg-code: #050609;            // Inset deep terminal background
   --code-text: #e2e8f0;
 
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-subtle: rgba(255, 255, 255, 0.08); // Precision hairline border
+  --border-strong: rgba(255, 255, 255, 0.16); // Focused / hovered border
   --border-focus: #38bdf8;
 
-  --text-primary: #f8fafc;       // Crisp white
-  --text-secondary: #94a3b8;     // Slate 400
-  --text-muted: #64748b;         // Slate 500
-  --text-inverse: #07090e;
+  --text-primary: #f8fafc;       // Slate 50 (clean high contrast, zero glare)
+  --text-secondary: #94a3b8;     // Slate 400 (comfortably readable body)
+  --text-muted: #64748b;         // Slate 500 (tertiary labels, dates)
+  --text-inverse: #08090c;
 
-  // Accent: Electric Sky / Cyan
+  // Accent: Electric Sky Cyan (Raycast / Linear signature)
   --accent: #38bdf8;             // Sky 400
   --accent-hover: #7dd3fc;       // Sky 300
-  --accent-subtle: rgba(56, 189, 248, 0.1);
-  --accent-border: rgba(56, 189, 248, 0.28);
+  --accent-subtle: rgba(56, 189, 248, 0.12);
+  --accent-border: rgba(56, 189, 248, 0.3);
   --accent-text: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.18);
+  --accent-glow: rgba(56, 189, 248, 0.2);
 
-  // Card & Element Shadows
+  // Modern Multi-layered Shadows & Card Highlights
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
-  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.7);
-  --shadow-lg: 0 12px 36px -4px rgba(0, 0, 0, 0.85);
-  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 4px 20px -2px rgba(0, 0, 0, 0.5);
-  --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.45), 0 12px 36px -4px rgba(56, 189, 248, 0.16);
-  --glass-bg: rgba(13, 17, 26, 0.75);
+  --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.75);
+  --shadow-lg: 0 12px 36px -4px rgba(0, 0, 0, 0.88);
+  --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 2px 8px -2px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.45), 0 12px 36px -4px rgba(56, 189, 248, 0.18);
+  --glass-bg: rgba(14, 17, 23, 0.8);
   --dot-color: rgba(255, 255, 255, 0.06);
 }
 
-// Light Theme
+// Light Theme (Clean Minimalist Slate)
 :root[data-theme="light"] {
   --bg-primary: #f8fafc;
   --bg-surface: #ffffff;
@@ -115,11 +115,11 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg-primary: #07090e;
-    --bg-surface: #0d111a;
-    --bg-surface-elevated: #131826;
-    --bg-subtle: #161c2c;
-    --bg-code: #04060a;
+    --bg-primary: #08090c;
+    --bg-surface: #0e1117;
+    --bg-surface-elevated: #141822;
+    --bg-subtle: #181d2a;
+    --bg-code: #050609;
     --code-text: #e2e8f0;
 
     --border-subtle: rgba(255, 255, 255, 0.08);
@@ -129,21 +129,21 @@
     --text-primary: #f8fafc;
     --text-secondary: #94a3b8;
     --text-muted: #64748b;
-    --text-inverse: #07090e;
+    --text-inverse: #08090c;
 
     --accent: #38bdf8;
     --accent-hover: #7dd3fc;
-    --accent-subtle: rgba(56, 189, 248, 0.1);
-    --accent-border: rgba(56, 189, 248, 0.28);
+    --accent-subtle: rgba(56, 189, 248, 0.12);
+    --accent-border: rgba(56, 189, 248, 0.3);
     --accent-text: #38bdf8;
-    --accent-glow: rgba(56, 189, 248, 0.18);
+    --accent-glow: rgba(56, 189, 248, 0.2);
 
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
-    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.7);
-    --shadow-lg: 0 12px 36px -4px rgba(0, 0, 0, 0.85);
-    --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 4px 20px -2px rgba(0, 0, 0, 0.5);
-    --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.45), 0 12px 36px -4px rgba(56, 189, 248, 0.16);
-    --glass-bg: rgba(13, 17, 26, 0.75);
+    --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.75);
+    --shadow-lg: 0 12px 36px -4px rgba(0, 0, 0, 0.88);
+    --shadow-card: 0 0 0 1px rgba(255, 255, 255, 0.07), 0 2px 8px -2px rgba(0, 0, 0, 0.6);
+    --shadow-card-hover: 0 0 0 1px rgba(56, 189, 248, 0.45), 0 12px 36px -4px rgba(56, 189, 248, 0.18);
+    --glass-bg: rgba(14, 17, 23, 0.8);
     --dot-color: rgba(255, 255, 255, 0.06);
   }
 }
