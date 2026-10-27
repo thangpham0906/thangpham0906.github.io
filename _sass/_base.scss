@@ -8,6 +8,11 @@
   padding: 0;
 }
 
+::selection {
+  background-color: rgba(56, 189, 248, 0.25);
+  color: var(--text-primary);
+}
+
 html {
   font-size: 16px;
   line-height: 1.6;
@@ -31,8 +36,11 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
-  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.08), transparent 70%);
-  background-repeat: no-repeat;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(56, 189, 248, 0.09), transparent 70%),
+    radial-gradient(var(--dot-color) 1px, transparent 1px);
+  background-size: 100% 100%, 28px 28px;
+  background-repeat: no-repeat, repeat;
   color: var(--text-primary);
   min-height: 100vh;
   display: flex;
@@ -41,7 +49,9 @@ body {
 }
 
 :root[data-theme="light"] body {
-  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(2, 132, 199, 0.05), transparent 70%);
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(2, 132, 199, 0.06), transparent 70%),
+    radial-gradient(var(--dot-color) 1px, transparent 1px);
 }
 
 // Accessible Skip Link
@@ -76,13 +86,13 @@ body {
 // Typography Hierarchy
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-primary);
-  font-weight: 700;
+  font-weight: 750;
   line-height: 1.2;
   letter-spacing: -0.025em;
 }
 
 h1 {
-  font-size: clamp(2.25rem, 5vw, 3.25rem);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
 h2 {

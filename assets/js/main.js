@@ -65,7 +65,56 @@
       });
     }
 
-    // 3. System Color Scheme Listener
+    // 3. Project Filter Tabs
+    var filterBtns = document.querySelectorAll('.filter-btn');
+    var projectItems = document.querySelectorAll('.project-item-wrapper');
+
+    if (filterBtns.length > 0 && projectItems.length > 0) {
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var targetFilter = btn.getAttribute('data-filter');
+
+          // Update active button state
+          filterBtns.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+
+          // Show / hide project items
+          projectItems.forEach(function (item) {
+            var category = item.getAttribute('data-category');
+            if (targetFilter === 'all' || category === targetFilter) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    }
+
+    // 4. One-Click Copy Email to Clipboard
+    var copyBtn = document.getElementById('copy-email-btn');
+    var copyText = document.getElementById('copy-email-text');
+
+    if (copyBtn && copyText) {
+      copyBtn.addEventListener('click', function () {
+        var email = copyBtn.getAttribute('data-email') || 'thangpham0906@gmail.com';
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function () {
+            var originalText = copyText.textContent;
+            copyText.textContent = 'Copied to clipboard! ✓';
+            setTimeout(function () {
+              copyText.textContent = originalText;
+            }, 2000);
+          }).catch(function () {
+            window.location.href = 'mailto:' + email;
+          });
+        } else {
+          window.location.href = 'mailto:' + email;
+        }
+      });
+    }
+
+    // 5. System Color Scheme Listener
     if (window.matchMedia) {
       var mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
       var handleSystemThemeChange = function (event) {

@@ -16,7 +16,7 @@ layout: default
         </div>
 
         <h1 class="hero-title">
-          Hello, I'm <span class="hero-accent">Pham Quoc Thang</span>.
+          Hi, I'm <span class="hero-accent">Pham Quoc Thang</span>.
         </h1>
 
         <div class="hero-positioning">
@@ -24,7 +24,7 @@ layout: default
         </div>
 
         <p class="hero-intro">
-          I engineer scalable backend services, high-throughput e-commerce platforms, and mission-critical API integrations. With 4+ years of hands-on production experience in Magento (EE/CE), Laravel, and enterprise workflow automation, I focus on system reliability, clean relational data models, and resilient third-party integrations.
+          I engineer high-availability backend services, high-throughput e-commerce architectures, and mission-critical API integrations. With 4+ years of hands-on production experience across Magento (EE/CE), Laravel, and enterprise workflow automation, I focus on clean relational data models, fault-tolerant integrations, and measurable business impact.
         </p>
 
         <div class="hero-actions">
@@ -60,7 +60,7 @@ layout: default
         </div>
       </div>
 
-      <!-- Right Column: Profile Card + Terminal Preview -->
+      <!-- Right Column: Profile Portrait + Technical Terminal Card -->
       <div class="hero-card">
         <div class="hero-avatar-row">
           <img src="{{ '/assets/img/hero-bg.png' | relative_url }}" alt="Pham Quoc Thang" class="hero-avatar-img">
@@ -89,6 +89,26 @@ layout: default
         </div>
       </div>
     </div>
+
+    <!-- Stats Metric Strip -->
+    <div class="stats-strip">
+      <div class="stat-item">
+        <div class="stat-number">4<span class="stat-suffix">+</span></div>
+        <div class="stat-label">Years of Backend Production Experience</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20<span class="stat-suffix">+</span></div>
+        <div class="stat-label">Team Scale in Enterprise Delivery</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">4<span class="stat-suffix"></span></div>
+        <div class="stat-label">Production Flagship Architectures</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100<span class="stat-suffix">%</span></div>
+        <div class="stat-label">Data Consistency &amp; System Uptime Focus</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -103,17 +123,25 @@ layout: default
       </p>
     </div>
 
-    <div class="projects-grid">
+    <!-- Project Filter Bar (Interactive) -->
+    <div class="project-filters" aria-label="Filter projects by category">
+      <button type="button" class="filter-btn active" data-filter="all">All Projects</button>
+      <button type="button" class="filter-btn" data-filter="E-Commerce">E-Commerce</button>
+      <button type="button" class="filter-btn" data-filter="Fintech & Enterprise">Fintech &amp; Enterprise</button>
+      <button type="button" class="filter-btn" data-filter="CMS & Web Architecture">CMS &amp; Web</button>
+    </div>
+
+    <div class="projects-grid" id="projects-grid">
       {% for project in site.data.projects %}
-        {% if project.featured %}
+        <div class="project-item-wrapper" data-category="{{ project.category }}">
           {% include project-card.html project=project %}
-        {% endif %}
+        </div>
       {% endfor %}
     </div>
 
-    <div style="margin-top: var(--space-8); text-align: center;">
+    <div style="margin-top: var(--space-10); text-align: center;">
       <a href="{{ '/projects/' | relative_url }}" class="btn btn-secondary">
-        <span>View All Projects &amp; Case Studies (4)</span>
+        <span>View All Project Deep-Dives</span>
         <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
         </svg>
@@ -210,17 +238,26 @@ layout: default
       </p>
 
       <div class="contact-channels">
+        <button type="button" class="copy-email-btn" id="copy-email-btn" data-email="thangpham0906@gmail.com" title="Click to copy email">
+          <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.666 3.888A2.25 2.25 0 0013.5 2.25h-3c-1.03 0-1.9.693-2.166 1.638m7.332 0c.055.194.084.4.084.612v0a.75.75 0 01-.75.75H9a.75.75 0 01-.75-.75v0c0-.212.03-.418.084-.612m7.332 0c.646.049 1.288.11 1.927.184 1.1.128 1.907 1.077 1.907 2.185V19.5a2.25 2.25 0 01-2.25 2.25H6.75A2.25 2.25 0 014.5 19.5V6.257c0-1.108.806-2.057 1.907-2.185a48.208 48.208 0 011.927-.184" />
+          </svg>
+          <span id="copy-email-text">thangpham0906@gmail.com</span>
+        </button>
+
         <a href="mailto:thangpham0906@gmail.com" class="btn btn-primary">
           <svg fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
           </svg>
-          <span>thangpham0906@gmail.com</span>
+          <span>Send Email</span>
         </a>
+
         <a href="https://linkedin.com/in/thangpham0906" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <span>Connect on LinkedIn ↗</span>
+          <span>LinkedIn ↗</span>
         </a>
+
         <a href="https://github.com/thangpham0906" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-          <span>GitHub Profile ↗</span>
+          <span>GitHub ↗</span>
         </a>
       </div>
     </div>
